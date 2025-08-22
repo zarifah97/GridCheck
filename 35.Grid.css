@@ -1,0 +1,126 @@
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: palevioletred;
+}
+
+.container > div{
+    background-color: rgb(246, 191, 218);
+    border: solid;
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    'header header header header header header' 
+    'menu main1 main1 main1 main1 right'
+    'footer footer footer footer footer footer';
+
+    gap: 10px;
+    background-color: azure;
+    padding: 10px;
+}
+
+.grid-container > div{
+    padding: 10px;
+    font-size: 16px;
+}
+
+.item1{
+    grid-area: header;
+    background-color: palevioletred;
+    text-align: center;
+    color: aliceblue;
+}
+
+h1.item1{font-size: 40px;}
+
+.item2{
+    grid-area: menu;
+    font-size: 10px;
+}
+.item2 ul{
+    list-style-type: none;
+    font-size: 10px;
+}
+.item2 li{
+    margin-bottom: 8px;
+    padding: 8px;
+    background-color: rgb(161, 100, 100);
+}
+
+.item2 li:hover{
+    background-color: aliceblue;
+}
+
+.item3 {grid-area: main1;}
+.item3 > h3{
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.item3 > p{ margin-bottom: 8px;}
+.item4{
+    grid-area: right;
+    border: 2px solid purple;
+    background-color: plum;
+    padding: 15px;
+    color: black;
+}
+
+.item4 > h3{
+    font-size: 20px;
+    padding-bottom: 8px;
+}
+
+.item4 li{
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.item5{
+    color: antiquewhite;
+}
+
+@media only screen and (max-width: 600px){
+    .item1{grid-area: 1/ span 6;}
+    .item2{grid-area: 2/ span 1;}
+    .item3{grid-area: 3/ span 5;}
+    .item4{grid-area: 4/ span 6;}
+    .item5{grid-area: 5/ span 6;}
+}
+
+@media only screen and (min-width: 768px){
+    .item1{grid-area: 1/ span 6;}
+    .item2{grid-area: 2/ span 1;}
+    .item3{grid-area: 2/ span 4;}
+    .item4{grid-area: 2/ span 1;}
+    .item5{grid-area: 3/ span 6;}
+}
+
+.flexcontainer{
+    display: flex;
+    background-color: antiquewhite;
+    flex-direction: row-reverse;
+    /*flex-wrap: wrap;*/
+}
+
+.flexcontainer > div{
+    background-color: aquamarine;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 3px 3px darkcyan;
+    text-align: center;
+
+}
